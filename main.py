@@ -1,7 +1,7 @@
 import random
 import time
 
-niveau_vie = 10
+niveau_vie = 5
 numero_monstre = 0
 numero_combat = 0
 nombre_victoires = 0
@@ -62,7 +62,9 @@ def combat_monstre():
         """.format(statut_partie, niveau_vie, victoires_consec))
 
         if niveau_vie < 1:
-            print("La partie est terminée, vous avez vaincu {} monstre(s).".format(nombre_victoires))
+            print("""
+            La partie est terminée, vous avez vaincu {} monstre(s)
+            et mené {} batailles.""".format(nombre_victoires, numero_combat))
 
         else:
             # time.sleep(5)
